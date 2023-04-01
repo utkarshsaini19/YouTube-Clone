@@ -1,0 +1,48 @@
+@import '../../base.scss';
+
+
+.categoriesBar {
+
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    display: flex;
+    overflow-x: scroll;
+
+
+
+    &::-webkit-scrollbar {
+        width: 10px !important;
+        height: 5px !important;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: hsla(0, 0%, 100%, -1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(156, 154, 154, 0.2);
+    }
+
+    scrollbar-width: none; // for firefox
+
+    span {
+        margin-right: 1rem;
+        padding: 0.5rem;
+
+        white-space: nowrap;
+        border: 1.5px solid $text-color;
+        border-radius: 999px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #374a59;
+        }
+
+        &.active {
+            color: #fff;
+            background-color: #606060;
+            border-color: $border-color;
+        }
+
+    }
+}
