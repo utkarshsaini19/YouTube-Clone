@@ -17,7 +17,7 @@ const Comments = ({id,totalComments}) => {
   const comments = useSelector(state => state.commentList.comments && state.commentList.comments)
   const [text,setText] = useState('')
   const _comments = comments?.map((comment)=>comment.snippet.topLevelComment.snippet)
-  const { user } = useSelector(state=>state.auth)
+  // const { user } = useSelector(state=>state.auth)
 
   const handleComment = (e) =>{
     e.preventDefault();
@@ -29,7 +29,7 @@ const Comments = ({id,totalComments}) => {
     <div className='comments'>
       <p>{totalComments} Comments</p>
       <div className='my-2 comments__form d-flex w-100'>
-        <img src={user.photoURL || profile} alt='avatar' className='mr-3 rounded-circle' />
+        <img src={profile} alt='avatar' className='mr-3 rounded-circle' />
         <form onSubmit={handleComment} className='d-flex flex-grow-1'>
           <input
             type='text'
