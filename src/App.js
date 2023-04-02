@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
 }
 
 const App = () => {
-  
+  console.log(process.env.REACT_APP_VARIABLES || "SAMPLE")
   const {accessToken , loading} = useSelector(state=> state.auth);
   const navigate = useNavigate();
   useEffect(()=>{
